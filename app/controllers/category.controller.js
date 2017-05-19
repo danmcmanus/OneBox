@@ -2,14 +2,15 @@
     'use strict';
 
     angular.module('app')
-        .controller('dashboardController', dashboardController);
+        .controller('categoryController', categoryController);
 
-    function dashboardController($http) {
+    function categoryController($http) {
         var vm = this;
         vm.getToolDetails = function() {
             console.log('you have gotten the tool details');
         };
         vm.boxes = [];
+        vm.tools = [];
 
         vm.getBoxes = function() {
 
@@ -20,7 +21,19 @@
             };
             $http(request)
                 .then(function(response) {
-                    angular.copy(response.data.boxes[0], vm.boxes);
+                    console.log(response.data.boxes[0].inventory.categories[0]);
+                    var toolIds = response.data.boxes[0].inventory.categories[0].tools;
+                    var allTools = response.data.boxes[0].tools;
+                    console.log("ids:" + toolIds);
+                   for(var j=0;j<toolIds.length;j++){
+                        for(var i=0;i<allTools.length;i++){
+                            if(toolIds[j] === allTools[i].id){
+                                vm.tools.push(allTools[i]);
+                            }
+                        }
+                    }
+                    console.log("tools:" + vm.tools);
+                    //angular.copy(response.data.boxes[0], vm.boxes);
                 }, function(error) {
                     vm.errorMessage = "Failed to load data" + error;
                 })

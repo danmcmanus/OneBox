@@ -28,7 +28,7 @@
             $routeProvider.when('/category',{
                 controller: 'categoryController',
                 controllerAs: 'vm',
-                templateUri: '/views/category.view.html'
+                templateUrl: '/views/category.view.html'
             });
 
             $routeProvider.otherwise({ redirectTo: "/" });

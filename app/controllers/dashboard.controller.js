@@ -25,7 +25,6 @@
                     vm.errorMessage = "Failed to load data" + error;
                 })
                 .finally(function() {
-                    console.log(vm.boxes);
                     vm.isBusy = false;
                 });
         }
