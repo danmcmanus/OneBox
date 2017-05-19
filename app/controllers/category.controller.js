@@ -21,10 +21,8 @@
             };
             $http(request)
                 .then(function(response) {
-                    console.log(response.data.boxes[0].inventory.categories[0]);
                     var toolIds = response.data.boxes[0].inventory.categories[0].tools;
                     var allTools = response.data.boxes[0].tools;
-                    console.log("ids:" + toolIds);
                    for(var j=0;j<toolIds.length;j++){
                         for(var i=0;i<allTools.length;i++){
                             if(toolIds[j] === allTools[i].id){
@@ -32,13 +30,12 @@
                             }
                         }
                     }
-                    console.log("tools:" + vm.tools);
+                    console.log(vm.tools);
                     //angular.copy(response.data.boxes[0], vm.boxes);
                 }, function(error) {
                     vm.errorMessage = "Failed to load data" + error;
                 })
                 .finally(function() {
-                    console.log(vm.boxes);
                     vm.isBusy = false;
                 });
         }
