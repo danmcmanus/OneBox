@@ -9,7 +9,6 @@
             $mdThemingProvider.theme('dark-orange').backgroundPalette('orange').dark();
             $mdThemingProvider.theme('light-green').backgroundPalette('green').dark();
             $mdThemingProvider.theme('dark-red').backgroundPalette('red').dark();
-            $locationProvider.hashPrefix('');
 
             $routeProvider.when("/boxes", {
                 controller: "boxController",
