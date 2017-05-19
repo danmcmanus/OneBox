@@ -15,20 +15,31 @@
                 controller: "boxController",
                 controllerAs: "vm",
                 templateUrl: "/views/box.view.html"
-            }).when("/dashboard", {
+            });
+            $routeProvider.when("/dashboard", {
                 controller: "dashboardController",
                 controllerAs: "vm",
                 templateUrl: "/views/dashboard.view.html"
-            }).when('/dashboard:id', {
+            });
+            $routeProvider.when('/dashboard:id', {
                 controller: 'dashboardController',
                 controllerAs: 'vm',
                 template: '<dashboard></dashboard>'
 
-            }).when('/details', {
+            });
+            $routeProvider.when('/details', {
                 controller: 'toolDetailsController',
                 controllerAs: 'vm',
                 templateUrl: "/views/tool-details.html"
-            }).otherwise({ redirectTo: "/" });
+            });
+
+
+            $routeProvider.when('/category', {
+                controller: 'categoryController',
+                controllerAs: 'vm',
+                templateUri: '/views/category.view.html'
+            });
+            $routeProvider.otherwise({ redirectTo: "/" });
 
         });
 })();
