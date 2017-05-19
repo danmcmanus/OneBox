@@ -1,3 +1,107 @@
-<div class="container">
-    <h1>Dashboard View</h1>
-</div>
+<md-content class="md-padding" layout-xs="column" layout="row">
+    <div flex-xs flex-gt-xs="35" layout="column">
+        <md-card data-ng-model="tool" md-theme="{{ showDarkTheme ? 'dark-red' : 'light-green' }}" md-theme-watch>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Tool</span>
+                    <span class="md-subhead">Medium</span>
+                </md-card-title-text>
+                <md-card-title-media>
+                    <div class="md-media-md card-media"></div>
+                </md-card-title-media>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-checkbox ng-model="showDarkTheme">select</md-checkbox>
+                <md-button data-ng-click="getToolDetails()">Details</md-button>
+
+            </md-card-actions>
+        </md-card>
+        <md-card data-ng-model="vm.tool" md-theme="{{ showDarkTheme ? 'dark-red' : 'light-green' }}" md-theme-watch>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Tool</span>
+                    <span class="md-subhead">Medium</span>
+                </md-card-title-text>
+                <md-card-title-media>
+                    <div class="md-media-md card-media"></div>
+                </md-card-title-media>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-checkbox ng-model="showDarkTheme">select</md-checkbox>
+                <md-button data-ng-click="getToolDetails()">Details</md-button>
+
+            </md-card-actions>
+        </md-card>
+    </div>
+    <div flex-xs flex-gt-xs="35" layout="column">
+        <md-card data-ng-model="vm.tool" md-theme="{{ showDarkTheme ? 'dark-red' : 'light-green' }}" md-theme-watch>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Tool</span>
+                    <span class="md-subhead">Medium</span>
+                </md-card-title-text>
+                <md-card-title-media>
+                    <div class="md-media-md card-media"></div>
+                </md-card-title-media>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-checkbox ng-model="showDarkTheme">select</md-checkbox>
+                <md-button data-ng-click="getToolDetails()">Details</md-button>
+
+            </md-card-actions>
+        </md-card>
+        <md-card data-ng-model="vm.tool" md-theme="{{ showDarkTheme ? 'dark-red' : 'light-green' }}" md-theme-watch>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Tool</span>
+                    <span class="md-subhead">Medium</span>
+                </md-card-title-text>
+                <md-card-title-media>
+                    <div class="md-media-md card-media"></div>
+                </md-card-title-media>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-checkbox ng-model="showDarkTheme"></md-checkbox>
+                <md-button data-ng-click="getToolDetails()">Details</md-button>
+
+            </md-card-actions>
+        </md-card>
+
+    </div>
+    <div data-ng-for="var i = 0; i < 4; i++" flex-xs flex-gt-xs="35" layout="column">
+        <md-card data-ng-model="vm.tool" md-theme="{{ showDarkTheme ? 'dark-red' : 'light-green' }}" md-theme-watch>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Tool</span>
+                    <span class="md-subhead">Medium</span>
+                </md-card-title-text>
+                <md-card-title-media>
+                    <div class="md-media-md card-media"></div>
+                </md-card-title-media>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-checkbox ng-model="showDarkTheme">select</md-checkbox>
+                <md-button data-ng-click="getToolDetails()">Details</md-button>
+
+            </md-card-actions>
+        </md-card>
+        <md-card data-ng-model="vm.tool" md-theme="{{ showDarkTheme ? 'dark-red' : 'light-green' }}" md-theme-watch>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Tool</span>
+                    <span class="md-subhead">Medium</span>
+                </md-card-title-text>
+                <md-card-title-media>
+                    <div class="md-media-md card-media"></div>
+                </md-card-title-media>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-checkbox ng-model="showDarkTheme">select</md-checkbox>
+                <md-button data-ng-click="getToolDetails()">Details</md-button>
+
+            </md-card-actions>
+        </md-card>
+
+
+    </div>
+</md-content>

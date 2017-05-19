@@ -16,6 +16,7 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
+    </div>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-aria/angular-aria.min.js"></script>
     <script src="bower_components/angular-messages/angular-messages.min.js"></script>
@@ -26,94 +27,97 @@
     <script src="controllers/dashboard.controller.js"></script>
     <script src="controllers/box.controller.js"></script>
     <script src="data/box.service.js"></script>
-    <script src="sidebar.js"></script>
     <script src="utility/simpleControls.js"></script>
+    <script src="directives/dashboard.directive.js"></script>
 
 </head>
+<style>
+
+</style>
 
 <body>
-    <div data-ng-controller="sidebarController as sidebar" id="sidebar" layout="column" class="fabSpeedDialdemoBasicUsage">
-
-
-
+    <div class="container">
+        <ng-view></ng-view>
+    </div>
+    <!--<div class="viewer">
         <ul>
             <img src="~/../img/thumb-free-photostock-vector-man-avatar-user-picture-cartoon-character-vector-illustration-picture.jpg" alt="headshot" class="headshot" /> <span id="username">Fred</span>
             <li class="active"><a href="#">My Boxes</a></li>
             <li><a href="##">My Tools</a></li>
 
         </ul>
-    </div>
 
-    <div class="container" id="wrapper">
-        <div class="row">
-            <div class="col-md-2">
-                <md-card class="box">
-                    <md-card-title>
-                        <md-card-title-text>
-                            <span class="md-headline">Card with image</span>
-                            <span class="md-subhead">Medium</span>
-                        </md-card-title-text>
-                        <md-card-title-media>
-                            <div class="md-media-md card-media"></div>
-                        </md-card-title-media>
-                    </md-card-title>
-                    <md-card-actions layout="row" layout-align="end center">
-                        <md-button>Action 1</md-button>
-                        <md-button>Action 2</md-button>
-                    </md-card-actions>
-                </md-card>
-            </div>
-            <div class="col-md-2">
-                <md-card class="box">
-                    <md-card-title>
-                        <md-card-title-text>
-                            <span class="md-headline">Card with image</span>
-                            <span class="md-subhead">Medium</span>
-                        </md-card-title-text>
-                        <md-card-title-media>
-                            <div class="md-media-md card-media"></div>
-                        </md-card-title-media>
-                    </md-card-title>
-                    <md-card-actions layout="row" layout-align="end center">
-                        <md-button>Action 1</md-button>
-                        <md-button>Action 2</md-button>
-                    </md-card-actions>
-                </md-card>
-            </div>
-            <div class="col-md-2">
-                <md-card class="box">
-                    <md-card-title>
-                        <md-card-title-text>
-                            <span class="md-headline">Card with image</span>
-                            <span class="md-subhead">Medium</span>
-                        </md-card-title-text>
-                        <md-card-title-media>
-                            <div class="md-media-md card-media"></div>
-                        </md-card-title-media>
-                    </md-card-title>
-                    <md-card-actions layout="row" layout-align="end center">
-                        <md-button>Action 1</md-button>
-                        <md-button>Action 2</md-button>
-                    </md-card-actions>
-                </md-card>
-            </div>
-        </div>
-        <div id="main" class="container">
-            <div class="view-container">
-                <div ng-view class="view-frame">
 
+        <div class="container" id="wrapper">
+            <div class="row">
+                <div class="col-sm-3">
+                    <md-card class="box">
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline">Card with image</span>
+                                <span class="md-subhead">Medium</span>
+                            </md-card-title-text>
+                            <md-card-title-media>
+                                <div class="md-media-md card-media"></div>
+                            </md-card-title-media>
+                        </md-card-title>
+                        <md-card-actions layout="row" layout-align="end center">
+                            <md-button>Action 1</md-button>
+                            <md-button>Action 2</md-button>
+                        </md-card-actions>
+                    </md-card>
+                </div>
+                <div class="col-sm-3">
+                    <md-card class="box">
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline">Card with image</span>
+                                <span class="md-subhead">Medium</span>
+                            </md-card-title-text>
+                            <md-card-title-media>
+                                <div class="md-media-md card-media"></div>
+                            </md-card-title-media>
+                        </md-card-title>
+                        <md-card-actions layout="row" layout-align="end center">
+                            <md-button>Action 1</md-button>
+                            <md-button>Action 2</md-button>
+                        </md-card-actions>
+                    </md-card>
+                </div>
+                <div class="col-sm-3">
+                    <md-card class="box">
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline">Card with image</span>
+                                <span class="md-subhead">Medium</span>
+                            </md-card-title-text>
+                            <md-card-title-media>
+                                <div class="md-media-md card-media"></div>
+                            </md-card-title-media>
+                        </md-card-title>
+                        <md-card-actions layout="row" layout-align="end center">
+                            <md-button>Action 1</md-button>
+                            <md-button>Action 2</md-button>
+                        </md-card-actions>
+                    </md-card>
                 </div>
             </div>
+            <div id="main" class="container">
+                <div class="view-container">
+                    <div ng-view class="view-frame">
 
-        </div>
+                    </div>
+                </div>
 
-        <div id="footer" class="container-fluid">
-            <div class="navbar navbar-fixed-bottom">
-                <h4 class="text-center text-info">Hackathon '17</h4>
+            </div>
+
+            <div id="footer" class="container-fluid">
+                <div class="navbar navbar-fixed-bottom">
+                    <h4 class="text-center text-info">Hackathon '17</h4>
+                </div>
             </div>
         </div>
-    </div>
-
+    </div>-->
 
 </body>
 

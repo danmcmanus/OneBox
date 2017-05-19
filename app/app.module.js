@@ -18,13 +18,20 @@
                 templateUrl: "/views/dashboard.view.html"
             });
 
+            $routeProvider.when('/dashboard:id', {
+                controller: 'dashboardController',
+                controllerAs: 'vm',
+                template: '<dashboard></dashboard>'
+
+            });
+
             $routeProvider.otherwise({ redirectTo: "/" });
 
         })
         .config(function($mdThemingProvider) {
             $mdThemingProvider.theme('dark-grey').backgroundPalette('grey').dark();
             $mdThemingProvider.theme('dark-orange').backgroundPalette('orange').dark();
-            $mdThemingProvider.theme('dark-purple').backgroundPalette('deep-purple').dark();
-            $mdThemingProvider.theme('dark-blue').backgroundPalette('blue').dark();
+            $mdThemingProvider.theme('light-green').backgroundPalette('green').dark();
+            $mdThemingProvider.theme('dark-red').backgroundPalette('red').dark();
         });
 })();

@@ -15,8 +15,13 @@ thumb {
     width: 100px;
 }
 
-.box {
+.item-card {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(3, 50px)
+    grid-template-columns: repeat(3, 150px)
+}
+
+.viewer {
+    height: 100%;
+    width: 100%;
 }
