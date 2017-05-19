@@ -13,12 +13,12 @@
         vm.isBusy = true;
 
 
-        function getBoxes(id) {
-            id = 2;
+        vm.getBoxes = function() {
+
             var request = {
                 method: 'GET',
                 crossDomain: true,
-                url: "https://p4gurfjpg5.execute-api.us-east-1.amazonaws.com/api/boxes?id={id}",
+                url: "https://p4gurfjpg5.execute-api.us-east-1.amazonaws.com/api/boxes",
             };
             $http(request)
                 .then(function(response) {
@@ -30,8 +30,10 @@
                     console.log(vm.boxes);
                     vm.isBusy = false;
                 });
+
+
         }
 
-        return vm.boxes[1];
+
     }
 }());
