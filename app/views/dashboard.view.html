@@ -1,39 +1,31 @@
-<md-content class="md-padding" layout-xs="column" layout="row">
-    <div flex-xs flex-gt-xs="35" layout="column">
-        <md-card data-ng-model="tool" md-theme="{{ showDarkTheme ? 'dark-red' : 'light-green' }}" md-theme-watch>
-            <md-card-title>
-                <md-card-title-text>
-                    <span class="md-headline">Tool</span>
-                    <span class="md-subhead">Medium</span>
-                </md-card-title-text>
-                <md-card-title-media>
-                    <div class="md-media-md card-media"></div>
-                </md-card-title-media>
-            </md-card-title>
-            <md-card-actions layout="row" layout-align="end center">
-                <md-checkbox ng-model="showDarkTheme">select</md-checkbox>
-                <md-button data-ng-click="getToolDetails()">Details</md-button>
-
-            </md-card-actions>
-        </md-card>
-        <md-card data-ng-model="vm.tool" md-theme="{{ showDarkTheme ? 'dark-red' : 'light-green' }}" md-theme-watch>
-            <md-card-title>
-                <md-card-title-text>
-                    <span class="md-headline">Tool</span>
-                    <span class="md-subhead">Medium</span>
-                </md-card-title-text>
-                <md-card-title-media>
-                    <div class="md-media-md card-media"></div>
-                </md-card-title-media>
-            </md-card-title>
-            <md-card-actions layout="row" layout-align="end center">
-                <md-checkbox ng-model="showDarkTheme">select</md-checkbox>
-                <md-button data-ng-click="getToolDetails()">Details</md-button>
-
-            </md-card-actions>
-        </md-card>
+<md-content class="md-padding" layout-xs="column" layout="row" data-ng-init="vm.getBoxes()">
+    <div flex-xs flex-gt-xs="120" layout="row">
+        <div ng-repeat="n in vm.boxes.inventory.categories track by $index">
+            <a href="#cateegory">
+            <md-card data-ng-model="tool" md-theme="{{ showDarkTheme ? 'dark-red' : 'light-green' }}" md-theme-watch>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">{{n.name}}</span>
+                        <span class="md-subhead">Number of tools: {{n.tools.length}}</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button >Details</md-button>
+                </md-card-actions>
+            </md-card>
+            </a>
+        </div>
     </div>
-    <div flex-xs flex-gt-xs="35" layout="column">
+</md-content>
+<md-content class="md-padding" layout-xs="column" layout="row"
+    <div flex-xs flex-gt-xs="120" layout="column">
+        <div flex-xs flex-gt-xs="35" layout="row">
+        <md-card >
+            <img src="/img/unlocked.png" width="100" height="100"/>
+        </md-card>
+        </div>
+    </div>
+   <!-- <div flex-xs flex-gt-xs="35" layout="column">
         <md-card data-ng-model="vm.tool" md-theme="{{ showDarkTheme ? 'dark-red' : 'light-green' }}" md-theme-watch>
             <md-card-title>
                 <md-card-title-text>
@@ -103,5 +95,5 @@
         </md-card>
 
 
-    </div>
+    </div>-->
 </md-content>
