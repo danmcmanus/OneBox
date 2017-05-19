@@ -20,9 +20,16 @@
 <md-content class="md-padding" layout-xs="column" layout="row"
     <div flex-xs flex-gt-xs="120" layout="column">
         <div flex-xs flex-gt-xs="35" layout="row">
-        <md-card >
-            <img src="/img/unlocked.png" width="100" height="100"/>
-        </md-card>
+            <md-card >
+                <img src="/img/unlocked.png" width="80" height="80"/>
+            </md-card>
+        </div>
+        <div flex-xs flex-gt-xs="35" layout="row">
+            <md-card-title style="margin-left:50px">
+                <md-card-title-text>
+                    <span class="md-headline">Box Owner: </br>{{vm.boxes.assignee.name}}</span>
+                </md-card-title-text>
+            </md-card-title>
         </div>
     </div>
    <!-- <div flex-xs flex-gt-xs="35" layout="column">
