@@ -6,9 +6,7 @@
 
     function toolDetailsController($http) {
         var vm = this;
-        vm.tool = {
-
-        };
+        vm.tool = {};
 
         vm.getTool = function() {
 
@@ -19,7 +17,8 @@
             };
             $http(request)
                 .then(function(response) {
-                    angular.copy(response.data, vm.tool);
+                    console.log(response.data[0]);
+                    angular.copy(response.data[0], vm.tool);
                 }, function(error) {
                     vm.errorMessage = "Failed to load data" + error;
                 })
@@ -29,4 +28,4 @@
                 });
         };
     }
-}());
+})();

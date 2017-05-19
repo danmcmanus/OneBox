@@ -1,13 +1,12 @@
-<pre>{{vm.tool|json}}</pre>
-<div>
+<div data-ng-init="vm.getTool()">
 
     <div class="card-container">
         <div class="card-container">
-            <a href="#dashboard">
-                <div class="card" id="searchCard">
-                    <img class="img-left" src="~/../../img/phones/dell-venue.0.jpg" style="width:100%" />
-                    <p class="text-label">Add Milwaukee Tool</p>
-                </div>
-            </a>
+
+            <div class="card" id="searchCard">
+                <img class="img-left" src="{{vm.tool.image}}" style="width:100%" />
+                <p class="text-label">{{vm.tool.name}}</p>
+            </div>
+
         </div>
     </div>
